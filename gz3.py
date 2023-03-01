@@ -8,6 +8,20 @@
 #     -> 1
 
 
+# n = int(input("Введите количество элементов массива: "))
+# countX = 0
+# list = []
+# for i in range(0, n):
+#     list.append(int(input(f"Введите {i+1}й элемент массива: ")))
+# print("Ваш массив: ",list)
+# x = int(input("Введите число Х: "))
+
+# for i in range(len(list)):
+#     if list[i] == x:
+#         countX += 1
+          
+# print(f"Значение {x} повторялось {countX} раз")
+
 
 #----------------------------------------------------------------
 # Задача 18: Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X.
@@ -19,6 +33,31 @@
 #     6
 #     -> 5
 
+
+# n = int(input("Введите количество элементов массива: "))
+# list = []
+# for i in range(0, n):
+#     list.append(int(input(f"Введите {i+1}й элемент массива: ")))
+# print("Ваш массив: ",list)
+# x = int(input("Введите число Х: "))
+# closestNum = list[0]
+
+# diff = x - list[0]
+# if diff < 0:
+#     diff *= -1
+
+# for i in range(len(list)):
+#     temp = x - list[i]
+    
+#     if temp < 0:
+#         temp *= -1
+    
+#     if temp < diff:
+#         diff = temp
+#         closestNum = list[i]
+
+        
+# print(f"Самый близкий по величине элемент к заданному числу = {closestNum}")
 
 
 #----------------------------------------------------------------
@@ -36,3 +75,48 @@
 # *Пример:*
 # ноутбук
 #     12
+
+
+# one_point = ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е', 'И', 'Н','О', 'Р', 'С', 'Т']
+# two_points = ['D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У']
+# three_points = ['B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я']
+# four_points = ['F', 'H', 'V', 'W', 'Y', 'Й', 'Ы']
+# five_points = ['K', 'Ж', 'З', 'Х', 'Ц', 'Ч']
+# eight_points = ['J', 'X', 'Ш', 'Э', 'Ю']
+# ten_points = ['Q', 'Z', 'Ф', 'Щ', 'Ъ']
+
+# score = 0
+# word = input("Введите слово: ")
+# word = word.upper()
+
+# for i in range(len(word)):
+#     for j in range(len(one_point)):
+#         if word[i] == one_point[j]:
+#             score += 1
+#             break
+#     for j in range(len(two_points)):
+#         if word[i] == two_points[j]:
+#             score += 2
+#             break
+#     for j in range(len(three_points)):
+#         if word[i] == three_points[j]:
+#             score += 3
+#             break
+#     for j in range(len(four_points)):
+#         if word[i] == four_points[j]:
+#             score += 4
+#             break
+#     for j in range(len(five_points)):
+#         if word[i] == five_points[j]:
+#             score += 5
+#             break
+#     for j in range(len(eight_points)):
+#         if word[i] == eight_points[j]:
+#             score += 8
+#             break
+#     for j in range(len(ten_points)):
+#         if word[i] == ten_points[j]:
+#             score += 10
+#             break
+
+# print(f'В СЛОВЕ {word} {score} ОЧКОВ')
